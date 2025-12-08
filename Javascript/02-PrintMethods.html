@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- GetElementById for 25th line-->
+    <h1 id="result"></h1>
+
+
+    <!-- Print methods except document.write all in inspect -->
+    <script>
+
+        console.log("Hello in log");
+        console.warn("Hello in warn");
+        console.error("Hello in Error");
+        //  rest above for Developers the below are for UI
+        document.write("Hello in UI")
+
+
+
+        // First I create a unique ID for H1 Tag and then getting that id "result"
+        // that from the whole document(Entire webpage)
+        let H1Object = document.getElementById("result")
+        // if u console H1Obj u will get the below value since hoisting in JS
+
+        // Now assigning value for the variable 
+        H1Object.innerHTML = "Hello I am in ID"
+
+
+        // for the above two lines simple one line
+
+        let H2Obj = document.getElementById("result").innerHTML = "Done"
+
+
+        // += it means it will take the current and add the next
+
+        let H3Obj = document.getElementById("result").innerHTML += "Done"
+    </script>
+
+</body>
+
+</html>
