@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+
+
+<body>
+    <h1 id="result"></h1>
+    <!-- Can assign value default in textbox -->
+    <!-- Enter First Value:<input type="text" name="name1" value="6" id="f1"><br><br> -->
+    Enter First Value:<input type="text" name="name1" id="f1"><br><br>
+    Enter Second Value:<input type="text" name="name2" id="f2"><br>
+    <button onclick="add()">Add</button>
+
+    <Script>
+        function add() {
+            /* From the enire webpage(document) getting the element 
+             but we need the value from user thats why using .value */
+            let result1 = Number(document.getElementById("f1").value)
+            let result2 = Number(document.getElementById("f2").value)
+
+            let totResult = result1 + result2
+            console.log(totResult);
+
+            let totalRes = document.getElementById("result")
+            totalRes.innerHTML = "The Result of" + result1 + "and " + result2 + "is" + totResult
+        }
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: grey;
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            left: 250px
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-columns: 80px 80px 80px; */
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="calci"></h1>
+        <div class="calculator">
+            <button id="0">0</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button onclick="add()">+</button>
+            <button>-</button>
+            <button>*</button>
+            <button>/</button>
+            <button>clear</button>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+
+            let first = Number(document.getElementById("1").value)
+            let second = Number(document.getElementById("2").value)
+            let third = Number(document.getElementById("3").value)
+            let four = Number(document.getElementById("4").value)
+            let five = Number(document.getElementById("5").value)
+            let six = Number(document.getElementById("6").value)
+            let seven = Number(document.getElementById("7").value)
+            let eight = Number(document.getElementById("8").value)
+            let nine = Number(document.getElementById("9").value)
+
+            let add = first + second
+
+            let finalResult = document.getElementById("calci").innerHTML("The Result is " + first + "and" + second + "is" + add);
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

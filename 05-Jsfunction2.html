@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: blanchedalmond;
+            height: 200px;
+            width: 400px;
+            position: absolute;
+            left: 250px;
+            padding: 50px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- UI Purpose -->
+
+    <h1 id="add"></h1>
+    <h1 id="subtract"></h1>
+    <h1 id="multiplication"></h1>
+    <h1 id="Division"></h1>
+
+    <!-- TO GET INPUT FROM USER -->
+    <div class="container">
+        <!-- Enter First Number : <input type="text" id="first"><br><br>
+        Enter Second Number : <input type="text" id="second"><br> -->
+
+        Enter First Number : <input type="number" id="first"><br><br>
+        Enter Second Number : <input type="number" id="second"><br>
+        <br>
+        <!-- add -->
+        <button style="background-color: red; color: white; border: none;" onclick="add ()">Add</button>
+        <!-- Subtract -->
+        <button style="background-color: red; color: white; border: none;" onclick="subtract ()">Subtract</button>
+        <!-- Multiplication -->
+        <button style="background-color: red; color: white; border: none;"
+            onclick="multipication ()">Multiplication</button>
+        <!-- Division -->
+        <button style="background-color: red; color: white; border: none;" onclick="division ()">Division</button>
+    </div>
+    <!-- LOGIC -->
+    <script>
+
+
+        function add() {
+            //   getting values
+
+            // let getFirst = Number(document.getElementById("first").value)
+            // let getSecond = Number(document.getElementById("second").value)
+
+            let getFirst = document.getElementById("first").value
+            let getSecond = document.getElementById("second").value
+            // add logic
+            let addSum = getFirst + getSecond
+
+            let finalSum = document.getElementById("add").innerHTML = "The Sum of" + getFirst + "and" + getSecond + "is" + addSum
+        }
+
+        function subtract() {
+            //   getting values
+
+            let getFirst = Number(document.getElementById("first").value)
+            let getSecond = Number(document.getElementById("second").value)
+            // subtract logic
+            let subNumbers = getFirst - getSecond
+
+            let finalSub = document.getElementById("subtract").innerHTML = "The Subtraction of" + getFirst + "and" + getSecond + "is" + subNumbers
+        }
+
+
+        function multipication() {
+            //   getting values
+
+            let getFirst = Number(document.getElementById("first").value)
+            let getSecond = Number(document.getElementById("second").value)
+            // multply logic
+            let mulNumbers = getFirst * getSecond
+
+            let finalMul = document.getElementById("multiplication").innerHTML = "The Subtraction of" + getFirst + "and" + getSecond + "is" + mulNumbers
+        }
+
+        function division() {
+            //   getting values
+
+            let getFirst = Number(document.getElementById("first").value)
+            let getSecond = Number(document.getElementById("second").value)
+            // division logic
+            let divNumbers = getFirst / getSecond
+
+            let finalMul = document.getElementById("Division").innerHTML = "The Subtraction of" + getFirst + "and" + getSecond + "is" + divNumbers
+        }
+
+    </script>
+</body>
+
+</html>
