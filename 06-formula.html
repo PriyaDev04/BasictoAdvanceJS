@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <input type="search" name="radAnswer" id="radAnswer"><br><br> -->
+    <!-- Sphere -->
+    <h1 id="radAnswer"></h1>
+    <!-- Cylinder -->
+
+    <!-- Sphere -->
+    <label for="radius">Enter The Radius</label>
+    <input type="text" id="Sphereradius" onkeyup="sphereCalculate ()"><br><br>
+    <!-- Cylinder -->
+    <label for="radius">Enter The Radius</label>
+    <input type="text" id="cylinderradius" onkeyup="cylinderCalculate ()">
+
+
+    <script>
+        // Sphere
+        function sphereCalculate() {
+            const PI = 3.14;
+            // let getRadius = Number(document.getElementById("radius").value)
+            let getRadius = document.getElementById("Sphereradius").value
+            console.log(getRadius, "raius");
+            // ** MEANS radius power of 3
+            let volume = 4 / 3 * PI * getRadius ** 3
+            let FinalRadius = document.getElementById("radAnswer")
+                .innerHTML = "Radius of Sphere is :" + volume
+        }
+
+        // Cylinder
+
+        function cylinderCalculate() {
+            let getRadius = Number(document.getElementById("cylinderradius").value)
+            cylinder => pi * r * r * h;
+        }
+
+    </script>
+</body>
+
+</html>
