@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Write a javascript program to accept two integers and check whether they are equal or not. 
+Test Data : 15 15
+Expected Output :
+Number1 and Number2 are equal
+ -->
+    <h1 id="integer"></h1>
+    Enter the First Number: <input type="text" id="firstInteger" onkeyup="checkInteger()"><br><br>
+    Enter the Secoond Number: <input type="text" id="secondInteger" onkeyup="checkInteger()"><br><br>
+
+
+    <!-- 2. Write a javascript program to check whether a given number is even or odd. 
+Test Data : 15
+Expected Output :
+15 is an odd integer -->
+
+    <h1 id="oddNumber"></h1>
+    Enter the Number: <input type="text" id="oddumber" onkeyup="checkOdd()"><br><br>
+
+    <!-- 3. Write a javascript program to check whether a given number is positive , negative or zero. 
+Test Data : 15
+Expected Output :
+15 is a positive number -->
+
+    <h1 id="numberChk"></h1>
+    Enter the Number: <input type="text" id="checkno" onkeyup="checkNum()"><br><br>
+
+
+
+    <script>
+
+        // 1
+        function checkInteger() {
+
+            let firstInteger = Number(document.getElementById("firstInteger").value)
+            let secondInteger = Number(document.getElementById("secondInteger").value)
+
+            if (firstInteger == secondInteger) {
+                document.getElementById("integer").innerHTML = "Number1 and Number2 are equal"
+            }
+
+
+        }
+
+        // 2
+
+        function checkOdd() {
+            let getNumber = Number(document.getElementById("oddumber").value)
+            // let checkOddNumber = getNumber % 2 == 0;
+
+            if (getNumber % 2 == 0) {
+                document.getElementById("oddNumber").innerHTML = "The Number is even"
+            }
+            else {
+                document.getElementById("oddNumber").innerHTML = "The Number is Odd"
+            }
+        }
+
+        // 3
+
+        // 2
+
+        function checkNum() {
+            let getNumber = Number(document.getElementById("oddumber").value)
+            // let checkOddNumber = getNumber % 2 == 0;
+
+            if (getNumber % 2 == 0) {
+                document.getElementById("oddNumber").innerHTML = "The Number is even"
+            }
+            else {
+                document.getElementById("oddNumber").innerHTML = "The Number is Odd"
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
