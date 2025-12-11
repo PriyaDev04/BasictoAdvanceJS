@@ -5,44 +5,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            height: 1400px;
+            width: 600px;
+            background-color: rgb(137, 209, 240);
+            position: absolute;
+            left: 185px;
+            padding: 50px
+        }
+
+        .h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
 
-    <!-- <input type="search" name="radAnswer" id="radAnswer"><br><br> -->
-    <!-- Sphere -->
-    <h1 id="radAnswer"></h1>
-    <!-- Cylinder -->
+        <h1 class="h1">AREA CALCULATOR</h1>
+        <!-- <input type="search" name="radAnswer" id="radAnswer"><br><br> -->
+        <!-- Sphere -->
+        <h1 id="radAnswer"></h1>
+        <h1>SPHERE</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="Sphereradius" onkeyup="sphereCalculate ()"><br><br>
+        <!-- Cylinder -->
+        <h1 id="cylinderAnswer"></h1>
+        <h1>CYLINDER</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="cylinderradius" onkeyup="cylinderCalculate ()">
+        <label for="height">Enter The Height</label>
+        <input type="text" id="cylinderheight" onkeyup="cylinderCalculate ()">
 
-    <!-- Sphere -->
-    <label for="radius">Enter The Radius</label>
-    <input type="text" id="Sphereradius" onkeyup="sphereCalculate ()"><br><br>
-    <!-- Cylinder -->
-    <label for="radius">Enter The Radius</label>
-    <input type="text" id="cylinderradius" onkeyup="cylinderCalculate ()">
+        <!-- CONE -->
+        <h1 id="coneAnswer"></h1>
+        <h1>CONE</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="coneradius" onkeyup="coneCalculate ()">
+        <label for="height">Enter The Height</label>
+        <input type="text" id="coneheight" onkeyup="coneCalculate ()">
 
 
+        <!-- CUBE -->
+        <h1 id="cubeAnswer"></h1>
+        <h1>CUBE</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="cuberadius" onkeyup="cubeCalculate ()">
+
+        <!-- Triangle -->
+        <h1 id="triangleAnswer"></h1>
+        <h1>TRIANGLE</h1>
+        <label for="radius">Enter The Breadth</label>
+        <input type="text" id="trianglebreadth" onkeyup="triangleCalculate ()">
+        <label for="radius">Enter The Height</label>
+        <input type="text" id="triangleheight" onkeyup="triangleCalculate ()">
+
+        <!-- CELSIUS TO FAHREN -->
+        <h1 id="celsiusAnswer"></h1>
+        <h1>CELSIUS TO FAHRENHEIT</h1>
+        <label for="radius">Enter The Celsius</label>
+        <input type="text" id="celsius" onkeyup="celsiusCalculate ()">
+
+        <!-- Fahren TO Celsius -->
+        <h1 id="fahrenheitAnswer"></h1>
+        <h1>FAHRENHEIT TO CELSIUS </h1>
+        <label for="radius">Enter The FAHRENHEIT</label>
+        <input type="text" id="fahreit" onkeyup="fahrenCalculate ()">
+
+        <!-- Miles To Kilometer-->
+        <h1 id="milesAnswer"></h1>
+        <h1>MILES TO KILOMETER </h1>
+        <label for="radius">Enter The Miles</label>
+        <input type="text" id="miles" onkeyup="mileCalculate ()">
+
+        <!-- Simple Interest -->
+        <h1 id="siAnswer"></h1>
+        <h1>SIMPLE INTEREST</h1>
+        <label for="radius">Enter The Principal</label>
+        <input type="text" id="principal" onkeyup="simpleInterestCalculate ()">
+        <label for="radius">Enter The Rate</label>
+        <input type="text" id="rate" onkeyup="simpleInterestCalculate ()"><br><br>
+        <label for="radius">Enter The Time</label>
+        <input type="text" id="time" onkeyup="simpleInterestCalculate ()">
+
+        <!--Surface area of Sphere -->
+        <h1 id="spAnswer"></h1>
+        <h1>SURFACE AREA OF SPHERE</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="Spradius" onkeyup="sphere1Calculate ()"><br><br>
+
+        <!-- Surface area of Cylinder -->
+        <h1 id="cylAnswer"></h1>
+        <h1>SURFACE AREA OF CYLINDER</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="cyradius" onkeyup="cylinder1Calculate ()">
+        <label for="height">Enter The Height</label>
+        <input type="text" id="cyheight" onkeyup="cylinder1Calculate ()">
+
+
+
+        <!-- Surface Area of CUBE -->
+        <h1 id="cuAnswer"></h1>
+        <h1>SURFACE AREA OF CUBE</h1>
+        <label for="radius">Enter The Radius</label>
+        <input type="text" id="cubadius" onkeyup="cube1Calculate ()">
+
+    </div>
     <script>
         // Sphere
         function sphereCalculate() {
             const PI = 3.14;
-            // let getRadius = Number(document.getElementById("radius").value)
-            let getRadius = document.getElementById("Sphereradius").value
+            let getRadius = Number(document.getElementById("Sphereradius").value)
+            // let getRadius = document.getElementById("Sphereradius").value
             console.log(getRadius, "raius");
             // ** MEANS radius power of 3
             let volume = 4 / 3 * PI * getRadius ** 3
             let FinalRadius = document.getElementById("radAnswer")
-                .innerHTML = "Radius of Sphere is :" + volume
+                .innerHTML = "The Volume of the Sphere is :" + volume
         }
 
         // Cylinder
 
         function cylinderCalculate() {
+            const pi = 3.14
             let getRadius = Number(document.getElementById("cylinderradius").value)
-            cylinder => pi * r * r * h;
+            let getHeight = Number(document.getElementById("cylinderheight").value)
+            let cylinder = pi * getRadius * getRadius * getHeight;
+            let FinalRadius = document.getElementById("cylinderAnswer")
+                .innerHTML = "The Volume of the Cylinder is :" + cylinder
+
         }
 
+
+        // cone
+
+        function coneCalculate() {
+            const pi = 3.14
+            let getRadius = Number(document.getElementById("coneradius").value)
+            let getHeight = Number(document.getElementById("coneheight").value)
+            let cone = 1 / 3 * pi * getRadius * getRadius * getHeight;
+            let FinalRadius = document.getElementById("coneAnswer")
+                .innerHTML = "The Volume of the Cone is :" + cone
+
+        }
+
+        // cube
+
+        function cubeCalculate() {
+
+            let getRadius = Number(document.getElementById("cuberadius").value)
+            let cube = getRadius * getRadius * getRadius;
+            let FinalRadius = document.getElementById("cubeAnswer")
+                .innerHTML = "The Volume of the Cone is :" + cube
+
+        }
+
+
+        // triangle
+
+        function triangleCalculate() {
+            let getBreadth = Number(document.getElementById("trianglebreadth").value)
+            let getHeight = Number(document.getElementById("triangleheight").value)
+            let triangle = 1 / 2 * getBreadth * getHeight;
+            let FinalRadius = document.getElementById("triangleAnswer")
+                .innerHTML = "The Volume of the Triangle is :" + triangle
+
+        }
+
+
+        // celcius to fahren
+
+        function celsiusCalculate() {
+
+            let getCelsius = Number(document.getElementById("celsius").value)
+            let celsiusToFahren = getCelsius * 9 / 5 + 32;
+            let FinalResult = document.getElementById("celsiusAnswer")
+                .innerHTML = "Celsius to Fahrenheit :" + celsiusToFahren
+
+        }
+
+        // Fahren to celcius
+
+        function fahrenCalculate() {
+
+            let getFahrenheit = Number(document.getElementById("fahreit").value)
+            let fahrenTocelsius = getFahrenheit - 32 * 5 / 9;
+            let FinalResult = document.getElementById("fahrenheitAnswer")
+                .innerHTML = "Fahrenheit to Celsius :" + fahrenTocelsius
+
+        }
+
+        // Miles To Kilometer
+
+        function mileCalculate() {
+
+            let getMiles = Number(document.getElementById("miles").value)
+            let milesToKilo = 1.609 * getMiles;
+            let FinalResult = document.getElementById("milesAnswer")
+                .innerHTML = "Miles To KiloMeter :" + milesToKilo
+
+        }
+
+        //  Simple Interest
+
+        function simpleInterestCalculate() {
+            let getPrincipal = Number(document.getElementById("principal").value)
+            let getRate = Number(document.getElementById("rate").value)
+            let getTime = Number(document.getElementById("time").value)
+            let simpleInterest = getPrincipal * getRate * getTime / 100;;
+            let FinalInterest = document.getElementById("siAnswer")
+                .innerHTML = "The Simple Interest is :" + simpleInterest
+
+        }
+
+        // Surface area of Sphere
+        function sphere1Calculate() {
+            const PI = 3.14;
+            let getRadius = Number(document.getElementById("Spradius").value)
+            // let getRadius = document.getElementById("Sphereradius").value
+            console.log(getRadius, "raius");
+            let volume = 4 * PI * getRadius * getRadius
+            let FinalRadius = document.getElementById("spAnswer")
+                .innerHTML = "The Volume of the Sphere is :" + volume
+        }
+
+
+        // Surface area of Cylinder
+
+        function cylinder1Calculate() {
+            const pi = 3.14
+            let getRadius = Number(document.getElementById("cyradius").value)
+            let getHeight = Number(document.getElementById("cyheight").value)
+            let cylinder = 2 * pi * getRadius * getRadius + 2 * pi * getRadius * getHeight;
+            let FinalRadius = document.getElementById("cylAnswer")
+                .innerHTML = "The Volume of the Cylinder is :" + cylinder
+
+        }
+
+        // Surface area of cube
+
+        function cube1Calculate() {
+
+            let getRadius = Number(document.getElementById("cubadius").value)
+            let cube = 6 * getRadius * getRadius;
+            let FinalRadius = document.getElementById("cuAnswer")
+                .innerHTML = "The Volume of the Cone is :" + cube
+
+        }
     </script>
+
+
+
 </body>
 
 </html>
