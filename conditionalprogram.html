@@ -26,13 +26,69 @@ Expected Output :
     <h1 id="oddNumber"></h1>
     Enter the Number: <input type="text" id="oddumber" onkeyup="checkOdd()"><br><br>
 
-    <!-- 3. Write a javascript program to check whether a given number is positive , negative or zero. 
-Test Data : 15
+    <!-- 3. Write a javascript program to check 
+     whether a given number is positive , negative or zero. 
+    Test Data : 15
 Expected Output :
 15 is a positive number -->
 
     <h1 id="numberChk"></h1>
     Enter the Number: <input type="text" id="checkno" onkeyup="checkNum()"><br><br>
+
+    <!-- 5. Write a javascript program to read 
+     the age of a candidate and determine whether 
+     it is eligible for casting his/her own vote. 
+Test Data : 21
+Expected Output :
+Congratulation! You are eligible for casting your vote. -->
+
+    <h1 id="ageChk"></h1>
+    Enter the Age: <input type="text" id="checkAge" onkeyup="checkAge()"><br><br>
+
+
+    <!-- 21. Write a program in javascript 
+     to read any day number in integer and 
+     display day name of week in word . 
+Test Data :
+4
+Expected Output :
+Thursday
+  -->
+    <h1 id="displayDay"></h1>
+    Enter the Number: <input type="text" id="checkday" onkeyup="checkDay()"><br><br>
+
+    <!-- 22. Write a program in javascript 
+     to read any digit, display in the word
+     (only till 10 digits). 
+Test Data :
+4
+Expected Output :
+Four -->
+    <h1 id="displayletters"></h1>
+    Enter the Number: <input type="text" id="disLetters" onkeyup="disLetters()"><br><br>
+
+
+    <!-- 23. Write a program in javascript to read any Month Number in integer and display Month name in the word. 
+Test Data :
+4
+Expected Output :
+April -->
+    <h1 id="displayMonth"></h1>
+    Enter the Number: <input type="text" id="disMonth" onkeyup="checkMonth()"><br><br>
+
+    <!--  24. Write a program in javascript to 
+  read any Month Number in integer and 
+  display the number of days for this month. 
+Test Data :
+7
+Expected Output :
+Month have 31 days-->
+
+    <h1 id="displaynoOfDays"></h1>
+    Enter the Number: <input type="text" id="dismondays" onkeyup="checkdayMonth()"><br><br>
+
+
+
 
 
 
@@ -66,21 +122,189 @@ Expected Output :
         }
 
         // 3
-
-        // 2
-
         function checkNum() {
-            let getNumber = Number(document.getElementById("oddumber").value)
+            let getNumber = Number(document.getElementById("checkno").value)
             // let checkOddNumber = getNumber % 2 == 0;
 
-            if (getNumber % 2 == 0) {
-                document.getElementById("oddNumber").innerHTML = "The Number is even"
+            if (getNumber > 0) {
+                document.getElementById("numberChk").innerHTML = +getNumber + "is a positive number"
+            }
+            else if (getNumber < 0) {
+                document.getElementById("numberChk").innerHTML = +getNumber + "is a negative number"
             }
             else {
-                document.getElementById("oddNumber").innerHTML = "The Number is Odd"
+                document.getElementById("numberChk").innerHTML = +getNumber + "is Zero"
             }
         }
 
+        // 5
+        function checkAge() {
+            let getNumber = Number(document.getElementById("checkAge").value)
+            // let checkOddNumber = getNumber % 2 == 0;
+
+            if (getNumber > 18) {
+                document.getElementById("ageChk").innerHTML = "Congratulation! You are eligible for casting your vote"
+            }
+            else {
+                document.getElementById("ageChk").innerHTML = "Sorry ! You are not eligible for casting your vote"
+            }
+
+        }
+
+        // 22
+        function disLetters() {
+            let getNumber = Number(document.getElementById("disLetters").value)
+            switch (getNumber) {
+                case (getNumber = 1):
+                    document.getElementById("displayletters").innerHTML = "One"
+                    break;
+                case (getNumber = 2):
+                    document.getElementById("displayletters").innerHTML = "Two"
+                    break;
+                case (getNumber = 3):
+                    document.getElementById("displayletters").innerHTML = "Three"
+                    break;
+                case (getNumber = 4):
+                    document.getElementById("displayletters").innerHTML = "Four"
+                    break;
+                case (getNumber = 5):
+                    document.getElementById("displayletters").innerHTML = "Five"
+                    break;
+                case (getNumber = 6):
+                    document.getElementById("displayletters").innerHTML = "Six"
+                    break;
+                case (getNumber = 7):
+                    document.getElementById("displayletters").innerHTML = "Seven"
+                    break;
+                case (getNumber = 8):
+                    document.getElementById("displayletters").innerHTML = "Eight"
+                    break;
+                case (getNumber = 9):
+                    document.getElementById("displayletters").innerHTML = "Nine"
+                    break;
+                case (getNumber = 10):
+                    document.getElementById("displayletters").innerHTML = "Ten"
+                    break;
+            }
+
+        }
+
+        // 21
+        function checkDay() {
+            let getNumber = Number(document.getElementById("checkday").value)
+            switch (getNumber) {
+                case (getNumber = 1):
+                    document.getElementById("displayDay").innerHTML = "Monday"
+                    break;
+                case (getNumber = 2):
+                    document.getElementById("displayDay").innerHTML = "Tuesday"
+                    break;
+                case (getNumber = 3):
+                    document.getElementById("displayDay").innerHTML = "Wednesday"
+                    break;
+                case (getNumber = 4):
+                    document.getElementById("displayDay").innerHTML = "Thursday"
+                    break;
+                case (getNumber = 5):
+                    document.getElementById("displayDay").innerHTML = "Friday"
+                    break;
+                case (getNumber = 6):
+                    document.getElementById("displayDay").innerHTML = "Saturday"
+                    break;
+                case (getNumber = 7):
+                    document.getElementById("displayDay").innerHTML = "Sunday"
+                    break;
+            }
+
+        }
+
+        // 23
+        function checkMonth() {
+            let getNumber = Number(document.getElementById("disMonth").value)
+            switch (getNumber) {
+                case (getNumber = 1):
+                    document.getElementById("displayMonth").innerHTML = "January"
+                    break;
+                case (getNumber = 2):
+                    document.getElementById("displayMonth").innerHTML = "February"
+                    break;
+                case (getNumber = 3):
+                    document.getElementById("displayMonth").innerHTML = "March"
+                    break;
+                case (getNumber = 4):
+                    document.getElementById("displayMonth").innerHTML = "April"
+                    break;
+                case (getNumber = 5):
+                    document.getElementById("displayMonth").innerHTML = "May"
+                    break;
+                case (getNumber = 6):
+                    document.getElementById("displayMonth").innerHTML = "June"
+                    break;
+                case (getNumber = 7):
+                    document.getElementById("displayMonth").innerHTML = "July"
+                    break;
+                case (getNumber = 8):
+                    document.getElementById("displayMonth").innerHTML = "August"
+                    break;
+                case (getNumber = 9):
+                    document.getElementById("displayMonth").innerHTML = "September"
+                    break;
+                case (getNumber = 10):
+                    document.getElementById("displayMonth").innerHTML = "October"
+                    break;
+                case (getNumber = 11):
+                    document.getElementById("displayMonth").innerHTML = "November"
+                    break;
+                case (getNumber = 12):
+                    document.getElementById("displayMonth").innerHTML = "December"
+                    break;
+            }
+
+        }
+
+        // 24
+        function checkdayMonth() {
+            let getNumber = Number(document.getElementById("dismondays").value)
+            switch (getNumber) {
+                case (getNumber = 1):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+                case (getNumber = 2):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 28 days"
+                    break;
+                case (getNumber = 3):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+                case (getNumber = 4):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 30 days"
+                    break;
+                case (getNumber = 5):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+                case (getNumber = 6):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 30 days"
+                    break;
+                case (getNumber = 7):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+                case (getNumber = 8):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+                case (getNumber = 9):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 30 days"
+                    break;
+                case (getNumber = 10):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+                case (getNumber = 11):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 30 days"
+                    break;
+                case (getNumber = 12):
+                    document.getElementById("displaynoOfDays").innerHTML = "Month has 31 days"
+                    break;
+            }
+
+        }
 
     </script>
 </body>
