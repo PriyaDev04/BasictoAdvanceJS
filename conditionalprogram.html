@@ -88,8 +88,21 @@ Month have 31 days-->
     Enter the Number: <input type="text" id="dismondays" onkeyup="checkdayMonth()"><br><br>
 
 
+    <!-- 26. Write a program in 
+     javascript which is a Menu-Driven 
+     Program to perform a simple calculation. 
+Test Data :
+10
+2
+3
+Expected Output :
+The Multiplication of 10 and 2 is: 20 -->
 
+    <h1 id="multiplicationNo"></h1>
+    Enter the First Number: <input type="text" id="mulNumnber1" onkeyup="multiAnswer()"><br><br>
+    Enter the Second Number: <input type="text" id="mulNumnber2" onkeyup="multiAnswer()"><br><br>
 
+    <!--  -->
 
 
     <script>
@@ -306,6 +319,13 @@ Month have 31 days-->
 
         }
 
+        function multiAnswer() {
+
+            let firstMul = Number(document.getElementById("mulNumnber1").value)
+            let secondMul = Number(document.getElementById("mulNumnber2").value)
+            let answer = firstMul * secondMul
+            document.getElementById("multiplicationNo").innerHTML = "The Multiplication of " + firstMul + "and" + secondMul + "is" + answer
+        }
     </script>
 </body>
 
