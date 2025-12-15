@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        .container {
+            background-color: aquamarine;
+            position: absolute;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+20. Write a program in javascript to accept a grade and declare the equivalent description : 
+
+Grade	Description
+E	Excellent
+V	Very Good
+G	Good
+A	Average
+F	Fail
+Test Data :
+Input the grade :A
+Expected Output :
+You have chosen : Average
+ -->
+
+    <div class="conatiner">
+        <h1 style="border: 3px solid black;">EXAM GRADE RESULT</h1>
+        <h1 id="result"></h1>
+
+        Enter the Grade : <input type="text" id="grade" onkeyup="displayGrade()">
+    </div>
+
+
+    <script>
+        function displayGrade() {
+            let gradeFinal = document.getElementById("grade").value
+            switch (grade) {
+                case (grade = E):
+                    document.getElementById("result").innerHTML = "You have Chosen: Excellent"
+                    break;
+                case (grade = V):
+                    document.getElementById("result").innerHTML = "You have Chosen: Very Good"
+                    break;
+                case (grade = G):
+                    document.getElementById("result").innerHTML = "You have Chosen: Good"
+                    break;
+                case (grade = A):
+                    document.getElementById("result").innerHTML = "You have Chosen: Average"
+                    break;
+                case (grade = F):
+                    document.getElementById("result").innerHTML = "You have Chosen: Fail"
+                    break;
+
+
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>
