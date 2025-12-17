@@ -87,3 +87,128 @@ let num=321578 OddSum=16 evenSum=10 digitLen=6
 12. reverse a number 1234 -> 4321
 13. check whether a no. is palindrome or not
 i.e 12321 -> after reverse -> 12321
+
+---
+
+## Star Patterns (using loops) ⭐
+
+Below are concise star-pattern questions to practice nested loops. Each includes a sample input and expected output plus a short JavaScript solution using loops.
+
+1) Right triangle
+Test Data: n = 5
+Expected Output:
+```
+*
+**
+***
+****
+*****
+```
+Sample JS (nested loops):
+```js
+for (let i = 1; i <= n; i++) {
+	let line = '';
+	for (let j = 1; j <= i; j++) line += '*';
+	console.log(line);
+}
+```
+
+2) Inverted right triangle
+Test Data: n = 5
+Expected Output:
+```
+*****
+****
+***
+**
+*
+```
+Sample JS:
+```js
+for (let i = n; i >= 1; i--) {
+	console.log('*'.repeat(i));
+}
+```
+
+3) Centered pyramid
+Test Data: n = 5 (rows)
+Expected Output:
+```
+		*
+	 ***
+	*****
+ *******
+*********
+```
+Sample JS:
+```js
+for (let i = 1; i <= n; i++) {
+	const spaces = ' '.repeat(n - i);
+	const stars = '*'.repeat(2 * i - 1);
+	console.log(spaces + stars);
+}
+```
+
+4) Diamond (odd rows)
+Test Data: n = 5 (half height)
+Expected Output:
+```
+	*
+ ***
+*****
+ ***
+	*
+```
+Sample JS (combine pyramid + inverted pyramid):
+```js
+// top (including middle)
+for (let i = 1; i <= n; i++) console.log(' '.repeat(n - i) + '*'.repeat(2 * i - 1));
+// bottom
+for (let i = n - 1; i >= 1; i--) console.log(' '.repeat(n - i) + '*'.repeat(2 * i - 1));
+```
+
+5) Hollow square
+Test Data: n = 5
+Expected Output:
+```
+*****
+*   *
+*   *
+*   *
+*****
+```
+Sample JS:
+```js
+for (let i = 1; i <= n; i++) {
+	let line = '';
+	for (let j = 1; j <= n; j++) {
+		line += (i === 1 || i === n || j === 1 || j === n) ? '*' : ' ';
+	}
+	console.log(line);
+}
+```
+
+6) Pyramid of numbers (bonus) — Floyd style using stars optional
+Test Data: n = 4
+Expected Output:
+```
+1
+2 3
+4 5 6
+7 8 9 10
+```
+Sample JS:
+```js
+let val = 1;
+for (let i = 1; i <= n; i++) {
+	let line = '';
+	for (let j = 1; j <= i; j++) {
+		line += (val++) + (j === i ? '' : ' ');
+	}
+	console.log(line);
+}
+```
+
+----
+
+Want these converted into interactive HTML/JS examples or more patterns (e.g., hollow pyramid, mirrored triangles)? 🔧
