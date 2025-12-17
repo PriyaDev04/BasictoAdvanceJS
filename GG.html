@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <input type="text" id="num4">
+    <input type="text" id="num5">
+    <input type="text" id="num6">
+    <input type="text" id="num7">
+    <input type="text" id="num8">
+    <input type="text" id="num9">
+    <input type="text" id="num10"><br><br>
+
+    <button onclick="sumAvg()">Calculate</button>
+
+    <h1 id="natResult"></h1>
+
+    <input type="text" id="cubeInput">
+    <button onclick="cubeCalc()">cubes</button>
+
+    <h1 id="natResult"></h1>
+
+    <input type="text" id="tableNum">
+    <button onclick="tableCalc()">table</button>
+
+    <h1 id="natResult"></h1>
+
+    <input type="text" id="oddTerms">
+    <button onclick="oddCalc()">Odd numbers</button>
+
+    <h1 id="natResult"></h1>
+
+    <input type="text" id="factNum">
+    <button onclick="factorial()">factorial</button>
+
+    <input type="text" id="fibNum">
+    <button onclick="fibonacci()">fibonacci</button>
+
+    <input type="text" id="digitNum">
+    <button onclick="countDigits()">count digits</button>
+
+
+
+    <script>
+        function sumAvg() {
+            let sum = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                sum += Number(document.getElementById("num" + i).value);
+            }
+
+            let avg = sum / 10;
+
+            document.getElementById("natResult").innerHTML =
+                "The sum of 10 no is : " + sum + "<br>" +
+                "The Average is : " + avg.toFixed(6);
+        }
+    </script>
+
+
+    <script>
+        function cubeCalc() {
+            let n = Number(document.getElementById("cubeInput").value);
+            let i = 1;
+            let result = "";
+
+            while (i <= n) {
+                result += "Number is : " + i +
+                    " and cube of the " + i +
+                    " is : " + (i * i * i) + "<br>";
+                i++;
+            }
+
+            document.getElementById("natResult").innerHTML = result;
+        }
+    </script>
+
+    <script>
+        function tableCalc() {
+            let num = Number(document.getElementById("tableNum").value);
+            let result = "";
+
+            for (let i = 1; i <= 10; i++) {
+                result += num + " X " + i + " = " + (num * i) + "<br>";
+            }
+
+            document.getElementById("natResult").innerHTML = result;
+        }
+    </script>
+
+
+    <script>
+        function oddCalc() {
+            let n = Number(document.getElementById("oddTerms").value);
+            let count = 0, num = 1, sum = 0;
+            let result = "The odd numbers are : ";
+
+            while (count < n) {
+                if (num % 2 !== 0) {
+                    result += num + " ";
+                    sum += num;
+                    count++;
+                }
+                num++;
+            }
+
+            result += "<br>The Sum of odd Natural Number upto " + n + " terms : " + sum;
+
+            document.getElementById("natResult").innerHTML = result;
+        }
+    </script>
+
+    <script>
+        function factorial() {
+            let num = Number(document.getElementById("factNum").value);
+            let fact = 1;
+
+            while (num > 0) {
+                fact = fact * num;
+                num--;
+            }
+
+            document.getElementById("natResult").innerHTML =
+                "Factorial is : " + fact;
+        }
+    </script>
+
+    <script>
+        function fibonacci() {
+            let n = Number(document.getElementById("fibNum").value);
+            let a = 0, b = 1;
+            let result = a + " " + b + " ";
+
+            for (let i = 3; i <= 30; i++) {
+                let c = a + b;
+                result += c + " ";
+                a = b;
+                b = c;
+            }
+
+            document.getElementById("natResult").innerHTML = result;
+        }
+    </script>
+
+    <script>
+        function countDigits() {
+            let num = Number(document.getElementById("digitNum").value);
+            let count = 0;
+
+            while (num > 0) {
+                count++;
+                num = Math.floor(num / 10);
+            }
+
+            document.getElementById("natResult").innerHTML =
+                "Total digits : " + count;
+        }
+    </script>
+
+</body>
+
+</html>
