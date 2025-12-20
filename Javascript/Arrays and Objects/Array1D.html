@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // ARRAYS
+        let userInfo = ["PriyA", 10, 9.5, ["HTML", "CSS", "JAVA"], undefined, null, NaN, false]
+
+        // null, undefined values will not print 
+        console.log(userInfo);
+        document.writeln(userInfo)
+        console.table(userInfo);
+
+
+
+        // lenth is 8 but indexing starts from "0" so to find the lenght is 
+
+        // let length = userInfo.length
+        // console.log(length);
+
+        // console.log(userInfo.length - 1);
+
+
+        // if we want to get values separately
+
+        // console.log(userInfo[0]);
+        // console.log(userInfo[1]);
+        // console.log(userInfo[2]);
+        // console.log(userInfo[3]);
+
+        // it wont be possible in taking individually like above so we use loop
+
+        for (i = 0; i < userInfo.length; i++) {
+            console.log("loop check", userInfo);
+
+        }
+
+    </script>
+</body>
+
+</html>
