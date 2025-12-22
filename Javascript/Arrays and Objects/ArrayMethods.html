@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Methods</title>
 </head>
 
 <body>
@@ -49,7 +49,155 @@
 
         // myArray.indexOf("Apple")
 
-        console.log(myArray.indexOf(("Apple"), "checking array"));
+        console.log(myArray.indexOf("Apple"), "checking array");
+
+        // 7. includes()
+
+        // Checks whether an element exists in the array and type of is boolean
+
+        console.log(myArray.includes("Grapes"), "checks grapes");
+
+        // 8.Slice()
+        // Extracts a portion of array(does NOT change original).
+        // Easy rule to remember 
+
+        // Syntax-----slice(startIndex, endIndex - 1)
+        // End index is never included
+
+        // it means we give 3 but it takes the before
+        let fruitArray = ["or", "ap", "gr", "pome"]
+        console.log(fruitArray.slice(1, 3), "slice");
+
+        // example-2
+        let fruits = ["or", "ap", "gr", "pome"];
+
+        let result = fruits.slice(1, 3);
+        console.log(result);   // ["ap", "gr"]
+        console.log(fruits);   // ["or", "ap", "gr", "pome"]
+
+
+        // 9. Splice()
+        // Adds / removes / replaces elements in an array (CHANGES original).
+        // Easy rule to remember
+
+        // Syntax-----splice(startIndex, deleteCount, item1, item2, ...)
+        // startIndex → where to start
+        // deleteCount → how many elements to remove
+        // item(s) → elements to add (optional)
+
+        let arr1 = [1, 2, 3, 4];
+        arr1.splice(1, 2);
+
+        console.log(arr1);
+
+
+        // 10.isArray()
+        // Checks whether the value is array
+        console.log(Array.isArray([1, 2])); // true
+
+        // 11.concat()
+        // Merges two arrays.
+
+        let a = [1, 2];
+        let b = [3, 4];
+
+        console.log(a.concat(b));
+
+        // 12.join()
+        // Converts array to string.
+
+        let arr = ["Hello", "Priya"];
+        console.log(arr.join(" "));
+
+
+
+        // 13.reverse()
+        // Reverses the array.
+        let priArray = [1, 2, 3];
+        priArray.reverse();
+
+        console.log(priArray);
+
+        // 14.sort()
+        // Sorts array elements.
+        let priArray1 = [3, 1, 2];
+        priArray1.sort();
+
+        console.log(priArray1);
+
+        // 15.findIndex()
+        // Returns the index of first matching element.
+        // Checks condition and returns the vaue and below output is 20
+
+        let priArray2 = [10, 20, 30];
+        console.log(priArray2.findIndex(num => num > 15));
+
+        // 16.reduce()
+        // Reduces array to a single value.
+
+        let priArray3 = [1, 2, 3, 4];
+        let sum = priArray3.reduce((total, num) => total + num, 0);
+
+        console.log(sum);
+
+        // 17.forEach()
+        // Loops through each element (no return value).
+
+        let priArray4 = [1, 2, 3];
+        priArray4.forEach(num => console.log(num));
+
+        // MATH
+        // 1.Math.round()
+        // Rounds to the nearest integer
+
+        Math.round(4.5);
+        // 5
+        Math.round(4.4);
+        // 4
+
+        // 2.Math.floor()
+        // Rounds to the nearest integer
+        Math.floor(4.9);
+        // 4
+
+        // 3.Math.ceil()
+        // Rounds up to nearest integer
+        Math.ceil(4.1);
+        // 5
+
+        // 4.Math.trunc()
+        // Removes decimal part only
+        Math.trunc(4.9);
+        // 4
+
+        // 5.Math.random()
+        // Generates random number between 0 and 1
+        Math.random();
+        // 0 to <1
+
+        // 6.Math.max()
+        Math.max(10, 5, 20);
+        // 20
+
+        // 7.Math.min()
+        Math.min(10, 5, 20);
+        // 5
+
+        // 8.Math.sqrt()
+        Math.sqrt(25);
+        // 5
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
