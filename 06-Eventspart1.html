@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Part-1</title>
+</head>
+
+<body>
+    <!-- EVENTS -->
+
+    <!-- Events in JavaScript are actions triggered by the user or browser, such as clicking a button or typing in a field.
+JavaScript handles these events using event listeners to perform specific tasks. -->
+
+    <!-- Mouse Events, Keyboard Events,Form Events,Window Events -->
+
+
+    <!-- 1.MOUSE EVENTS -->
+    <!-- APPROACH-1 HTML-->
+    <!-- This is approach 1 where u can use onclick fn() inside the 
+      button, it means inline and Not good for large apps-->
+    <button id="btn0" onclick="alert('click me')">Click Me</button>
+
+    <!-- APPROACH-2 HTML-->
+    <button id="btn1">Click Me</button>
+
+    <!-- APPROACH-3 HTML-->
+    <button id="btn3">ME CLICK</button>
+
+    <script>
+        // APPROACH-2 JS
+        // let myButton = document.getElementById("btn1")
+        // used function as property not as greet(), 
+        // for the below only if click it will work 
+        // otherwise even without click it will call default and when we click 
+        // it wont print again and again in console when we use greet()
+        // When click happens, THEN I will call this function”
+        // but this is old approach
+        // btn1.onclick = greet;
+
+        // function greet() {
+        //     // alert("Clicked me")
+        //     console.log("clicked in log");
+
+        // }
+
+        // APPROACH 3(BEST): addEventListener
+        // SYNTAX
+        // element.addEventListener("event", function);
+
+        let btn3 = document.getElementById("btn3")
+
+        // 1ST USING NORMAL FUNCTION
+
+        // btn3.addEventListener("click", hello);
+        // function hello() {
+        //     console.log("clicked me");
+
+        //     alert("Hi Priya")
+        // }
+
+        // 2ND
+        // USING CALL BACK--BEST AND SHORT
+        // single click
+        // btn3.addEventListener("click", () => {
+        //     console.log("clcik me ");
+        // })
+
+
+        // double click
+
+        // btn3.addEventListener("dblclick", () => {
+        //     // alert("double click")
+        //     console.log("checking double click");
+        // })
+
+
+
+        // mouse over
+        btn3.addEventListener("mouseover", () => {
+            console.log("checking mouseover");
+        })
+
+
+        // CHECKING e
+        // btn3.addEventListener("click", (e) => {
+
+        //     console.log(e, "what is e");
+
+        //     console.log("clcik me ");
+        // })
+
+    </script>
+
+</body>
+
+</html>
