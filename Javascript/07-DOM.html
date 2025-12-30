@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <!-- getElementsByClassName -->
+
+    <h1 class="head">heading1</h1>
+    <h1 class="head">heading1</h1>
+    <h1 class="head">heading1</h1>
+    <h1 class="head">heading1</h1>
+    <h1 class="head">heading1</h1>
+
+    <!--  getElementsByName -->
+    <h2 name="my1">PRIYA</h2>
+    <h2 name="my1">PRIYA</h2>
+    <h2 name="my1">PRIYA</h2>
+    <h2 name="my1">PRIYA</h2>
+    <h2 name="my1">PRIYA</h2>
+
+    <!-- QuerySelector --- for single value (ID) -->
+    <h2 name="my1">Good</h2>
+    <h2 name="my1">Good</h2>
+    <h2 name="my1" id="qselect">Good</h2>
+    <h2 name="my1">Good</h2>
+    <h2 name="my1">Good</h2>
+
+    <!-- QuerySelectorAll ---for multilple(like class) -->
+
+    <h1 class="head1" name="pri">heading2</h1>
+    <h1 class="head1">heading2</h1>
+    <h1 class="head1">heading2</h1>
+    <h1 class="head1">heading2</h1>
+    <h1 class="head1">heading2</h1>
+
+    <script>
+        // <!-- DOM Document Object Model-Hierarchy like tree like structure(Family) -->
+
+        // window is the parent, next document then one by one like html, head and sub tags
+
+        // DOCUMENT refers to the whole page
+        console.log(document);
+
+        // to see proper structure--all--htmlcollections all tree structure in inspect
+        console.dir(document)
+
+        console.log(window);
+
+        // everything in the tree structure is called node
+        // text like in list are called text node
+
+        // getElementsByClassName
+
+        //this works in array since class is duplicates not like id
+
+        let elementsArray = document.getElementsByClassName("head")
+        // DOM-WE CAN SEE THE below style and colour as sub parent 
+        console.log(elementsArray);
+
+        elementsArray[3].style.color = "blue"
+        elementsArray[2].style.backgroundColor = "greenyellow "
+
+
+        // getElementsByName
+
+
+        let elementsArray1 = document.getElementsByName("my1")
+
+
+        elementsArray1[3].style.color = "violet"
+        elementsArray1[1].style.backgroundColor = "orangered "
+
+        // QuerySelector---->for single value (ID)
+
+        let newArr = document.querySelector("#qselect").style.color = "green"
+
+
+        // < !--QuerySelectorAll ---for multilple(like class)-- >
+        // it has to  be in array
+
+        // let newArr1 = document.querySelectorAll(".head1")
+
+        // newArr1[3].style.backgroundColor = "greenyellow"
+
+        // just for understanding
+
+        // let newArr1 = document.querySelectorAll(".head1")
+        // // it will be by class
+        // console.log(newArr1);
+
+        // let newArr1 = document.querySelectorAll("h1")
+        // // it will be by tag
+        // console.log(newArr1);
+
+        let newArr1 = document.querySelectorAll("h1[name='my1']")
+        // it will be by name
+        console.log(newArr1);
+
+
+        // can create element by using CreateElement and appendchild 
+        // and also can add style dynamically
+    </script>
+
+
+
+
+
+</body>
+
+</html>

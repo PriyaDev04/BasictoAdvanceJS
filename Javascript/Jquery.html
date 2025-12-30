@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball {
+            height: 100px;
+            width: 100px;
+            background-color: greenyellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Jquery is a fast, small, and feature-rich JavaScript library.
+        It makes things like HTML document traversal and manipulation,
+        event handling, animation, and Ajax much simpler with an easy-to-use API
+        that works across a multitude of browsers.
+        jQuery is free, open-source software licensed under the MIT License.
+    -->
+
+    <h1 id="head">Lorem ipsum dolor sit amet.</h1>
+    <!-- <button id="up">Go Up</button>
+    <button id="down">Go Down</button>
+    <button id="toggle">toggle</button> -->
+
+    <!-- <div class="ball"></div>
+    <br><br>
+    <button class="animate">animate</button> -->
+    <h1 class="heading">Heading 1</h1>
+    <h1 class="heading">Heading 2</h1>
+    <h1 class="heading">Heading 3</h1>
+    <h1 class="heading">Heading 4</h1>
+    <h1 class="heading">Heading 5</h1>
+    <h1 class="heading">Heading 6</h1>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            // alert("jQuery is loaded and ready!");
+            // $("#head").css("color", "red");
+            // $("#head").css({ "color": "red", "background-color": "yellow" });
+            // $("#head").html("This text is changed using jQuery.");
+            // $("#head").click(function () {
+            //     alert("You clicked the heading!");
+            // });
+            // $("#head").on("mouseover", function () {
+            //     $(this).css("color", "blue");
+            // });
+            // $("#head").on("mouseout", function () {
+            //     $(this).css("color", "red");
+            // });
+            // ajax example
+            // $.ajax({
+            //     url: "https://fakestoreapi.com/products",
+            //     method: "GET",
+            //     success: function (data) {
+            //         console.log("AJAX Request Successful:", data);
+            //     },
+            //     error: function (error) {
+            //         console.error("AJAX Request Failed:", error);
+            //     }
+            // });
+
+            // $("#up").click(function () {
+            //     $("#head").slideUp(2000);
+            // });
+            // $("#down").click(function () {
+            //     $("#head").slideDown(2000);
+            // });
+            // $("#toggle").click(function () {
+            //     $("#head").slideToggle(2000);
+            // });
+
+            // $("#up").click(function () {
+            //     $("#head").fadeIn(2000);
+            // });
+            // $("#down").click(function () {
+            //     $("#head").fadeOut(2000);
+            // });
+            // $("#toggle").click(function () {
+            //     $("#head").fadeToggle(2000);
+            // });
+            // $(".animate").click(function () {
+            //     $(".ball")
+            //     .animate({ top: '500px', left: '500px', height: '150px', width: '150px' }, 2000)
+            //     .animate({ top: '0px', left: '0px', height: '100px', width: '100px' }, 2000);
+            // });
+            // const headArr = document.querySelectorAll(".heading");
+            // for (const e of headArr) {
+            //     e.addEventListener("click", () => {
+            //         e.style.backgroundColor = "yellow";
+            //     });
+            // }
+
+            // console.log($(".heading").get(2));
+
+            // $(".heading").get(2).addEventListener("click", function () {
+            //     $(this).css("background-color", "yellow");
+            // });
+        });
+
+
+    </script>
+</body>
+
+</html>
