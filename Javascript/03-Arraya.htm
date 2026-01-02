@@ -8,9 +8,63 @@
 </head>
 
 <body>
+    <p id="lenght"></p>
     <script>
 
         let myArray = ["priya", ["java", "html"], "apple", 2, "orange", 8.9]
+        // Array Methods
+        // 1.Length
+        let size = myArray.length
+
+        document.getElementById("lenght").innerHTML = size
+
+        // 2.To String
+        // console.log(myArray, "arr");
+
+        // let convert = myArray.toString()
+        // console.log(convert, "str");
+
+
+        // 3.  at()
+
+        console.log(myArray.at(2));// ans is apple
+
+        // 4.join
+
+        let arr2 = ["app", "bbb", "ccc"]
+        console.log(arr2.join("-"), "check join");
+
+        // 5.Push(add last)
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.push("Kiwi");
+
+        // 6.Pop(remove last)
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits1.pop();
+
+        // 7.unshift()(add first)
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits2.unshift("Lemon");
+
+        // 8 shift()(removes first)
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits3.shift();
+
+        // By Index we can grow array
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits4[0] = "Kiwi";
+
+        // Array isArray()--to check true or false
+        const fruits5 = ["Banana", "Orange", "Apple"];
+        console.log(Array.isArray(fruits5), "check isarray()");
+
+        // FLAT()--creates a new array into one even if it has subarray
+
+        const fruits6 = [["Banana", "grapes"], "Orange", "Apple"];
+        console.log(fruits6.flat(), "check flat");
+
+
 
         console.log(myArray[1][1], "index check")
         // for Loop to display
