@@ -11,13 +11,58 @@
 
     <!-- FUNCTIONS -->
 
-    <!-- 
+    <!-- Functions are building blocks
+    reusable block of code
+    functions are executed when they are called or invoked
+    Functions are defined with the function keyword -->
 
-Functions are building blocks
-reusable block of code
-functions are executed when they are called or invoked
-Functions are defined with the function keyword
--->
+    <!--     
+    // Advantages :
+    // 1. Reusability of code
+    // 2. Modularity -> independent to each other
+    // 3. increase readibility
+    // 4. Decrease complexity
+    
+    // there are two types of functions
+    // 1. Pre-defined (in-built)
+    // 2. User-Defined
+    
+    // functions can be categorized in 4 categories
+    
+    // 1. no argument no return type
+    // 2. no argument with return type
+    // 3. with argument no return type
+    // 4. with argument and with return type -->
+
+    <!-- // 1. no argument no return type
+    function greet() {
+    console.log("Good Morning Sir!");
+    // for(let i=1;i<10e9;i++); 
+    // 10s } 
+    
+    
+    // 2. no argument with return type 
+    function getValueOfPI() { // start // tsk
+        perform // end return 3.14; }
+        
+        
+        // 3. with argument no return type 
+        function printVolumeOfSphere(r) { let volume=4 / 3
+        * getValueOfPI() * getCube(r); console.log("the volume of sphere is :", volume); } 
+        
+        
+        // 4. with argument and with return type 
+        
+        function getCube(r) {
+         return r * r * r; } 
+         console.log("Hii"); 
+         // let result=Math.pow(2,7); // calling of function 
+        // let result=greet(); // calling of function 
+        
+        // let result=getValueOfPI(); // calling of function
+         // let result=getCube(2); // calling of function let result=printVolumeOfSphere(2.5); // calling of function
+        console.log("returned value is ", result);
+        console.log(" Byee"); // console.log(Math.pow(3,4)); -->
 
     <!-- syntax -->
 
@@ -37,9 +82,45 @@ Functions are defined with the function keyword
         let result = myName(3, 4)
         document.getElementById("func").innerHTML = result
 
-        let myFunction = function (a, b) { return a * b }
 
-        let myFunction1 = (a, b) => a * b;
+        function add(a, b) {
+            return a + b;
+        }
+
+        // let sum = function add(a, b) { // normal function
+        let sum = function (a, b) {  // anonymous function
+            let sum = (a, b) => {  // arrow function
+                // 1000 lines of codes
+                return a + b;
+            };
+        }
+        let sum1 = (a, b) => a + b; // in single line statement arrow function returns automatically
+
+        console.log(sum);
+
+        // let result=add(10,20);
+        // let result = sum(10, 20);
+        console.log(result);
+
+        function greet() {
+            console.log("Hello Sir");
+        }
+        setTimeout(greet, 3000);// callback
+
+        console.log(new Date());
+        setTimeout(() => {
+            console.log("Hello Sir! ", new Date());
+        }, 3000);
+
+        (function greet() {
+            console.log("Hello Sir");
+        })(); // IIFE
+
+
+
+        //  IIFE - Immediately Invoked Function Expression
+        // An IIFE is a JavaScript function that runs as soon as it is defined.
+        // It's a design pattern that allows you to execute a function immediately after declaring it.
 
     </script>
 
