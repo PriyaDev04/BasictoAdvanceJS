@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // JavaScript Control Flow
+
+        // Control Flow is the order in which statements are executed in a program.
+        // By default, JavaScript runs code from top to bottom and left to right.
+        // Control flow statements let you change that order, based on conditions, loops or keywords.
+
+        //         Loops let you run code multiple times using:
+        //                 for,while,do..while
+
+        //         Example
+        // Repeat flow until a condition(i < 5) is false.
+
+        for (let i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        // Jump Statements
+        // Jump statements let you change the flow abruptly using:
+
+        // break - exits a loop or switch
+        // continue - skips the current loop iteration
+        // return - exits from a function
+        // throw - jumps to error handling
+        // Example
+        // Terminate(break) the loop when the loop counter(i) is 3:
+
+        for (let i = 0; i < 10; i++) {
+            if (i === 3) { break; }
+            text += "The number is " + i + "<br>";
+        }
+
+        //         Function Flow
+        // Functions are callable and reusable code blocks:
+        //     Example
+        // Function to compute the product of two numbers:
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+
+        // JavaScript Is Single - Threaded
+        // JavaScript runs on a single thread.
+        // It can only do one thing at a time.
+        // Every task has to wait for the previous one to finish.
+        // This can freeze an application during slow operations(like file requests).
+
+        // Asynchronus Flow
+        // JavaScript Asynchronous Flow refers to how JavaScript handles tasks that take time to complete, like reading files, or waiting for user input, without blocking the execution of other code.
+        // To prevent blocking, JavaScript can use asynchronous programming.
+        // This allows certain operations to run in the background, and their results are handled later, when they are ready.
+
+        // Asynchronus Patterns
+        //     Events
+        //     Callbacks
+        //     Promises
+        //     Async / Await
+
+
+        // Callbacks
+        // A callback is a function that is passed as an argument to another function, and is intended to be executed at a later point in time, typically when a specific event occurs or an asynchronous operation completes.
+        // In the example below, myDisplayer is a called a callback function.
+        // It is passed to myCalculator() as an argument.
+
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function myCalculator(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+        }
+
+        myCalculator(5, 5, myDisplayer);
+
+        // Promises
+        // Promises represent a value that may be available now, later, or never.
+
+        fetch("https://api.example.com")
+        then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+
+        // Async / Await
+        //     Async / Await is a modern, cleaner way to handle asynchronous code.
+
+        // It makes asynchronous code look synchronous and easier to read.
+
+        async function getData() {
+            try {
+                const res = await fetch("https://api.example.com");
+                const data = await res.json();
+                console.log(data);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+
+        // Flow Concept	           Description
+        // Synchronus	          Executes line by line, blocking the next task.
+        // Asynchonus	          Allows other code to run while waiting for tasks to finish.
+        // Events	              Stores callback function waiting to be executed.
+        // Promises	              Tools to handle asynchronous operations cleanly.
+        //Async / Await	           A modern, cleaner way to handle asynchronous code.
+
+
+
+    </script>
+</body>
+
+</html>
