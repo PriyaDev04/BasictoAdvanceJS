@@ -204,16 +204,7 @@
 
     <script>
 
-        async function getAllProducts(URL) {
-            try {
-                const res = await fetch("https://fakestoreapi.com/products");
-                const products = await res.json();
-                printAllProducts(products);
-                // console.log(typeof products, products);
-            } catch (err) {
-                console.log(err.message);
-            }
-        }
+
         getAllProducts();
         function printAllProducts(products) {
             const prod_container = document.querySelector("#prod_container");
@@ -237,6 +228,17 @@
     `;
                 prod_container.innerHTML += card;
             });
+        }
+
+        async function getAllProducts(URL) {
+            try {
+                const res = await fetch("https://fakestoreapi.com/products");
+                const products = await res.json();
+                printAllProducts(products);
+                // console.log(typeof products, products);
+            } catch (err) {
+                console.log(err.message);
+            }
         }
 
     </script>
